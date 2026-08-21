@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>sz333解压工具</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <OutputType>WinExe</OutputType>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net40</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>11.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="DSUnpack.AppIcon" />
+    <None Remove="DSUnpack.7zExe" />
+    <None Remove="DSUnpack.7zDll" />
+    <EmbeddedResource Include="app.ico" LogicalName="DSUnpack.AppIcon" />
+    <EmbeddedResource Include="7z.exe" LogicalName="DSUnpack.7zExe" />
+    <EmbeddedResource Include="7z.dll" LogicalName="DSUnpack.7zDll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+</Project>
